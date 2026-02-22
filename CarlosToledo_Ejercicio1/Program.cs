@@ -113,3 +113,25 @@ switch (opciónmenú)
         Console.WriteLine("ERROR: tipo de atención inválido");
         return;
 }
+
+String acción;
+if (prioridad == 1)
+{
+    acción = "Reanimación inmediata";
+}
+else if (prioridad == 2)
+{
+    acción = "Atención urgente y observación";
+}
+else if  (prioridad == 3)
+{
+    acción = "Atención prioritaria";
+}
+else
+{
+    acción = "Consulta normal";
+}
+
+Console.WriteLine("RESULTADO FINAL DEL TRIAGE");
+Console.WriteLine("Prioridad final: " + prioridad);
+Console.WriteLine("Acción sugerida: " + acción);
