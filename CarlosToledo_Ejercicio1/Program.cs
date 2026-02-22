@@ -46,4 +46,5 @@ else if (pressistolica < 50 || pressistolica > 250) ;
     Console.WriteLine("ERROR: Presión sistólica fuera de rango");
 }
 
-int prioridad = 4;
+int prioridad = 4; 
+
