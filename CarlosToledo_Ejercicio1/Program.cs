@@ -48,3 +48,68 @@ else if (pressistolica < 50 || pressistolica > 250) ;
 
 int prioridad = 4; 
 
+switch (opciónmenú)
+{
+    case 1:
+        if (oxigeno < 90)
+        {
+            prioridad = 1;
+        }
+        else
+        {
+            if (temp >= 39 && niveldolor >= 8)
+            {
+                prioridad = 2;
+            }
+            else
+            {
+                prioridad = 3;
+            }
+        }
+        break;
+
+        case 2:
+        if (niveldolor >= 7)
+        {
+            prioridad = 3;
+
+        }
+        else
+        {
+            prioridad = 4;
+        }
+        break;
+
+        case 3:
+        if (edad < 12)
+        {
+            if (temp >= 38.5)
+            { 
+                prioridad = 2;
+            }
+            else
+            {
+                prioridad = 3;
+            }
+        }
+        else
+        {
+            prioridad = 4;
+        }
+        break;
+
+        case 4:
+        if (niveldolor  > 8) 
+        {
+            prioridad = 2;
+        }
+        else
+        {
+            prioridad = 3; 
+        }
+        break;
+
+    default:
+        Console.WriteLine("ERROR: tipo de atención inválido");
+        return;
+}
